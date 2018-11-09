@@ -1,0 +1,13 @@
+<dir class="well">
+	<h1>Login</h1>
+<form method="post">{% csrf_token %}
+	{%for field in f %}
+	<div>
+		{{ field.label_tag}} <br>
+		{{field}}<br
+	</div>
+	{% endfor %}
+	<input type="submit" value="Guardaar">	
+</form>
+</dir>
+

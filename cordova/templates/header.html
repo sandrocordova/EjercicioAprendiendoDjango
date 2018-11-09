@@ -1,0 +1,12 @@
+<h1>Soy el header</h1>
+{% load staticfiles %}
+
+{% if user.is_authenticated %}
+	<p>Bienvenido, <b>{{user.username}}</b> | <a href="{% url 'logout' %}"> Cerrar sesión</a> </p>
+{% endif %}
+
+{% for msg in messages %}
+<div class="alert alert-{{msg.level_tag}}" role="alert">
+	{{msg.message}}
+</div>
+{% endfor %}
